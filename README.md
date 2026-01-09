@@ -1,4 +1,4 @@
-#Auditorium - Sistema Preditivo de Performance de Conteúdo
+# Auditorium - Sistema Preditivo de Performance de Conteúdo
 
 [![Status](https://img.shields.io/badge/Status-Em%20Produção-success)](https://github.com/mtharruda/Auditorium)
 [![Python](https://img.shields.io/badge/Python-3.9+-blue)](https://www.python.org/)
@@ -10,14 +10,13 @@
 ---
 
 ##Visão Geral
-
 **Auditorium** é uma aplicação web desenvolvida em Streamlit que utiliza **Random Forest Regressor** para predizer o número de pageviews de artigos de notícias com base em seus títulos. O sistema analisa características linguísticas, similaridade com conteúdo histórico e integra IA generativa para fornecer feedback editorial.
 
 **Status:** Sistema em produção - Utilizado diariamente por equipe editorial
 
 ---
 
-##Problema de Negócio
+## Problema de Negócio
 
 **Desafio:** Equipes editoriais publicam centenas de artigos diariamente sem previsibilidade de performance, dificultando:
 - Priorização de recursos editoriais
@@ -28,7 +27,7 @@
 
 ---
 
-##Arquitetura e Funcionalidades
+## Arquitetura e Funcionalidades
 
 ### Fluxo do Sistema
 
@@ -65,7 +64,7 @@ Título do Artigo → Feature Engineering → Modelo ML → Predição de Pagevi
 
 ---
 
-##Stack Técnico
+## Stack Técnico
 
 **Core:**
 - **Python 3.9+**
@@ -86,7 +85,7 @@ Título do Artigo → Feature Engineering → Modelo ML → Predição de Pagevi
 
 ---
 
-##Como Executar
+## Como Executar
 
 ### Pré-requisitos
 
@@ -113,7 +112,7 @@ A aplicação estará disponível em `http://localhost:8501`
 
 ---
 
-## 📈 Resultados e Impacto
+## Resultados e Impacto
 
 ### Métricas do Modelo
 - **R² Score:** ~0.72 (explica 72% da variância)
@@ -128,7 +127,7 @@ A aplicação estará disponível em `http://localhost:8501`
 
 ---
 
-##Funcionalidades da Interface
+## Funcionalidades da Interface
 
 ### 1. Predição de Audiência
 ```
@@ -175,7 +174,7 @@ Auditorium/
 
 ---
 
-##Nota sobre Dados
+## Nota sobre Dados
 
 Este repositório contém a estrutura e código da aplicação. Dados históricos e modelos treinados com informações proprietárias são mantidos em repositório privado por questões de confidencialidade.
 
@@ -183,7 +182,7 @@ Este repositório contém a estrutura e código da aplicação. Dados histórico
 
 ---
 
-##Aprendizados Técnicos
+## Aprendizados Técnicos
 
 ### Feature Engineering
 - Comprimento do título é preditor significativo
@@ -202,7 +201,7 @@ Este repositório contém a estrutura e código da aplicação. Dados histórico
 
 ---
 
-##Exemplo de Uso
+## Exemplo de Uso
 
 ```python
 # Carregar modelo treinado
@@ -216,10 +215,9 @@ predicao = model.predict([features])
 
 print(f"Pageviews estimados: {predicao[0]:,.0f}")
 ```
-
 ---
 
-##Roadmap Futuro
+## Roadmap Futuro
 
 - [ ] Adicionar classificação multi-classe (alta/média/baixa)
 - [ ] Incorporar features de timing (dia da semana, hora)
@@ -228,14 +226,6 @@ print(f"Pageviews estimados: {predicao[0]:,.0f}")
 - [ ] A/B testing de títulos em tempo real
 
 ---
-
-## Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
----
-
 <div align="center">
 Made with ❤️ and ☕ by [Matheus Arruda](https://github.com/mtharruda)
 </div>
