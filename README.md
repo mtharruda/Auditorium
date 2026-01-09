@@ -3,7 +3,6 @@
 [![Status](https://img.shields.io/badge/Status-Em%20Produção-success)](https://github.com/mtharruda/Auditorium)
 [![Python](https://img.shields.io/badge/Python-3.9+-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.0+-red)](https://streamlit.io/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 > Sistema de Machine Learning que prediz audiência de artigos antes da publicação, utilizado em produção por equipe editorial de portal de notícias de grande tráfego.
 
