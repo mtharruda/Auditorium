@@ -1,6 +1,3 @@
 # Auditorium
-Aplicativo desenvolvido para predizer a audiência de matérias jornalísticas a partir da análise do título fornecido pelo editor de texto (usuário).
-A predição ocorre pr meio de aprendizado de máquinas, com uso da biblioteca SciKit Learn, em um modelo de REGRESSÃO LINEAR. 
-Na segunda etapa, o algoritmo estabelece conexão com o Gemini, modelo de Inteligência Artificial generativa do Google. E realiza uma requisição para analisar e fornecer dicas de engajamento ao conteúdo.
-Código por Matheus Arruda, março de 2025
+O código Python apresentado descreve um aplicativo construído com Streamlit que realiza a previsão de audiência para títulos de notícias. Ele utiliza bibliotecas de aprendizado de máquina, como scikit-learn, para treinar um modelo (RandomForestRegressor) que estima as visualizações com base nos títulos, avaliando seu desempenho com métricas como MSE, R² e MAE. Além disso, a aplicação integra-se à API do Gemini para fornecer feedback editorial e ao GitHub para armazenar os títulos e suas previsões. A funcionalidade também inclui a comparação de novos títulos com dados históricos para encontrar similaridades usando fuzzy matching. Código por Matheus Arruda, março de 2025
 '''
