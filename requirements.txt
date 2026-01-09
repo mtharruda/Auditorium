@@ -1,0 +1,6 @@
+streamlit
+scikit-learn
+google.generativeai
+PyGithub
+fuzzywuzzy
+gdown
