@@ -82,7 +82,7 @@ def enriquecer_dataset(df):
 # --- DOWNLOAD E CARREGAMENTO DO MODELO ---
 @st.cache_resource(show_spinner=False)
 def load_model_from_drive():
-    FILE_ID = "1PRruXA-oB_tR-dFG-o2_Oad8heHO-unz"
+    FILE_ID = "" #FILE ID DO GOOGLE DRIVE, QUE CONTÉM O MODELO TREINADO
     OUTPUT_FILE = "modelo_classificacao_v2.joblib"
     
     # URL de download direto do GDrive
@@ -186,7 +186,7 @@ def append_to_github_txt(token, repo_name, file_path, text_to_append, audience_t
 st.title("Previsão de audiência")
 with st.sidebar:
     st.info("Este modelo utiliza um sistema de classificação pra predizer a audiência de uma reportagem com base no título, user need e dia da publicação")
-    st.link_button("Quer saber mais? Leia a documentação", "https://drive.google.com/file/d/1TRwzGB2xoF-HlEko_otSY_7s1Lh8rNDw")
+    st.link_button("Quer saber mais? Leia a documentação", "")
 
 
 # =======================================================
