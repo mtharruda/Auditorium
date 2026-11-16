@@ -4,3 +4,4 @@ google.generativeai
 PyGithub
 fuzzywuzzy
 gdown
+sentence_transformers

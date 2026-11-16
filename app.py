@@ -18,11 +18,15 @@ import os
 import joblib
 import gdown
 import base64
+
 #Gen AI
 import google.generativeai as genai
 from fuzzywuzzy import fuzz
+
 #Lib do Github - usaremos para salvar todos os títulos imputados pelo usuário. 
 from github import Github, GithubException
+
+
 # ======================================================
 # 1. CONFIGURAÇÕES INICIAIS
 # ======================================================
@@ -101,6 +105,13 @@ def load_model_from_drive():
         return None
 
 model_pipeline = load_model_from_drive()
+
+#CARREGAR O RANQUEADOR HOME
+ranqueador_home = joblib.load("/workspaces/predict_aud/ranqueador_home.joblib")
+from ranqueador_home import carregar, analisa
+#art = treinar(bd)
+art = carregar()
+
 
 # ======================================================
 # INTERFACE DE ENTRADA (INPUTS)
@@ -218,6 +229,10 @@ if st.button("Analisar título", type="primary"):
             # Pega a confiança da classe vencedora
             confianca_dict = dict(zip(classes, probs))
             confianca_valor = confianca_dict[predicao_classe] * 100
+
+
+            #Execução do ranking Globo
+            rank_home = analisa(art, novo_titulo)
             
             # --- EXIBIÇÃO ---
             st.divider()
@@ -232,7 +247,11 @@ if st.button("Analisar título", type="primary"):
 
                 if confianca_valor < 60:
                     st.warning("O modelo não está confiante quanto à predição. O resultado pode ser imprevisível. Considere alterar o título, User Need ou data de publicação.")
-                               
+
+            cor_home = "green" if rank_home == "alta" else "orange" if rank_home == "média" else "red"
+                st.markdown(f"### Possibilidade de Globo: :{cor_home}[{rank_home}]")
+
+
             with col_res2:
                 # Gráfico de barras das probabilidades
                 chart_data = pd.DataFrame({"Confiança": probs}, index=classes)
