@@ -248,7 +248,7 @@ if st.button("Analisar título", type="primary"):
                 if confianca_valor < 60:
                     st.warning("O modelo não está confiante quanto à predição. O resultado pode ser imprevisível. Considere alterar o título, User Need ou data de publicação.")
 
-            cor_home = "green" if rank_home == "alta" else "orange" if rank_home == "média" else "red"
+                cor_home = "green" if rank_home == "alta" else "orange" if rank_home == "média" else "red"
                 st.markdown(f"### Possibilidade de Globo: :{cor_home}[{rank_home}]")
 
 
